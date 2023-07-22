@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
-public class ProductAdvice {
+public class ControllerAdvice {
 
     @ExceptionHandler(NullPointerException.class)
     @ResponseBody
@@ -16,5 +16,4 @@ public class ProductAdvice {
     public MessageDTO processNullPointerException(NullPointerException e) {
         return new MessageDTO(e.getMessage(), "Error");
     }
-
 }
