@@ -14,6 +14,6 @@ public class ControllerAdvice {
     @ResponseBody
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
     public MessageDTO processNullPointerException(NullPointerException e) {
-        return new MessageDTO(e.getMessage(), "Error");
+        return new MessageDTO("Errors found in request try again later", "Error");
     }
 }
